@@ -1,5 +1,3 @@
-Jim Szalewski 5/2/17
-
 # print the greeting "HELLO, THIS IS A GROCERY STORE!"
 # get input from the user and make sure its a string
 # if the input isn't in all caps print "I AM HAVING A HARD TIME HEARING YOU."
