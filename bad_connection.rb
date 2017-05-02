@@ -1,7 +1,21 @@
-# print the greeting "HELLO, THIS IS A GROCERY STORE!"
-# get input from the user and make sure its a string
-# if the input isn't in all caps print "I AM HAVING A HARD TIME HEARING YOU."
-# if the input IS in all caps, print "NO, THIS IS NOT A PET STORE."
-# if the input is empty print "HELLO?!"
-# first time input is "GOODBYE!" print "ANYTHING ELSE I CAN HELP WITH?"
-# if consecutively after that the input is "GOODBYE!" print "THANK YOU FOR CALLING!"
+ready_to_quit = false
+puts "HELLO, THIS IS A GROCERY STORE!"
+
+
+until ready_to_quit
+  input = gets.chomp
+  if input == ''
+    puts "HELLO?!"
+  elsif input == input.downcase
+    puts "I'M HAVING A HARD TIME HEARING YOU!"
+  elsif input == input.upcase && input != "GOODBYE"
+    puts "NO, THIS IS NOT A PET STORE!"
+  elsif input == "GOODBYE"
+    puts "ANYTHING ELSE I CAN HELP WITH?"
+    goodbye = gets.chomp
+    if goodbye == "GOODBYE"
+      puts "THANK YOU FOR CALLING!"
+      ready_to_quit = true
+    end
+  end
+end
